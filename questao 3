@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicita ao usuário que insira a temperatura em Fahrenheit
+        Console.Write("Digite a temperatura em Fahrenheit: ");
+        
+        // Lê a entrada do usuário e converte para double
+        if (double.TryParse(Console.ReadLine(), out double fahrenheit))
+        {
+            // Converte para Celsius
+            double celsius = (fahrenheit - 32) / 1.8;
+            
+            // Exibe o resultado
+            Console.WriteLine($"A temperatura em Celsius é: {celsius:F2} °C");
+        }
+        else
+        {
+            Console.WriteLine("Por favor, insira um valor numérico válido.");
+        }
+    }
+}
