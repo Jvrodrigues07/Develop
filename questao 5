@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Entrada de dados
+        Console.Write("Digite o número de horas trabalhadas no mês: ");
+        double horasTrabalhadas = Convert.ToDouble(Console.ReadLine());
+        
+        Console.Write("Digite o valor recebido por hora de trabalho: ");
+        double valorPorHora = Convert.ToDouble(Console.ReadLine());
+        
+        Console.Write("Digite o valor do salário família por filho: ");
+        double salarioFamiliaPorFilho = Convert.ToDouble(Console.ReadLine());
+        
+        Console.Write("Digite o número de filhos menores de 14 anos: ");
+        int numeroDeFilhos = Convert.ToInt32(Console.ReadLine());
+        
+        // Cálculo do salário bruto
+        double salarioBase = horasTrabalhadas * valorPorHora;
+        double salarioFamilia = numeroDeFilhos * salarioFamiliaPorFilho;
+        double salarioBruto = salarioBase + salarioFamilia;
+        
+        // Exibição do resultado
+        Console.WriteLine($"\nSalário Bruto a receber: R$ {salarioBruto:F2}");
+    }
+}

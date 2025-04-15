@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicitar o total de veículos e rodas
+        Console.Write("Digite o total de veículos: ");
+        int totalVeiculos = int.Parse(Console.ReadLine());
+
+        Console.Write("Digite o total de rodas: ");
+        int totalRodas = int.Parse(Console.ReadLine());
+
+        // Calcular a quantidade de carros e motos
+        // Sabemos que um carro tem 4 rodas e uma moto tem 2 rodas
+        int carros = (totalRodas - totalVeiculos * 2) / 2;
+        int motos = totalVeiculos - carros;
+
+        // Exibir o resultado
+        Console.WriteLine($"Total de carros: {carros}");
+        Console.WriteLine($"Total de motos: {motos}");
+    }
+}

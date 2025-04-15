@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Leitura do salário fixo, valor das vendas e percentual
+        Console.Write("Digite o salário fixo do vendedor: ");
+        double salarioFixo = Convert.ToDouble(Console.ReadLine());
+        
+        Console.Write("Digite o valor total das vendas do mês: ");
+        double valorVendas = Convert.ToDouble(Console.ReadLine());
+        
+        Console.Write("Digite o percentual de comissão sobre as vendas: ");
+        double percentualComissao = Convert.ToDouble(Console.ReadLine());
+        
+        // Cálculo da comissão
+        double comissao = (percentualComissao / 100) * valorVendas;
+        
+        // Cálculo do salário total
+        double salarioTotal = salarioFixo + comissao;
+        
+        // Exibindo o resultado
+        Console.WriteLine($"O salário total do vendedor é: R${salarioTotal:F2}");
+    }
+}

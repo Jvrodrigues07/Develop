@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicita ao usuário que insira o preço do produto
+        Console.Write("Digite o preço do produto: ");
+        
+        // Lê o valor digitado e converte para decimal
+        decimal preco = Convert.ToDecimal(Console.ReadLine());
+        
+        // Calcula o acréscimo de 10%
+        decimal precoFinal = preco + (preco * 0.10m);
+        
+        // Exibe o valor final com acréscimo
+        Console.WriteLine($"O preço do produto com 10% de acréscimo é: {precoFinal:C}");
+    }
+}

@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicita ao usuário para inserir o primeiro número
+        Console.Write("Digite o primeiro número (o número do qual será calculado o logaritmo): ");
+        double numero1 = Convert.ToDouble(Console.ReadLine());
+
+        // Solicita ao usuário para inserir o segundo número (a base do logaritmo)
+        Console.Write("Digite o segundo número (a base do logaritmo): ");
+        double numero2 = Convert.ToDouble(Console.ReadLine());
+
+        // Verifica se o segundo número (base) é válido
+        if (numero2 <= 0 || numero2 == 1)
+        {
+            Console.WriteLine("A base do logaritmo deve ser maior que 0 e diferente de 1.");
+        }
+        else
+        {
+            // Calcula o logaritmo de numero1 na base numero2
+            double logaritmo = Math.Log(numero1) / Math.Log(numero2);
+
+            // Exibe o resultado
+            Console.WriteLine($"O logaritmo de {numero1} na base {numero2} é: {logaritmo}");
+        }
+    }
+}
